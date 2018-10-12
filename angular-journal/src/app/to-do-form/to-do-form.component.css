@@ -1,0 +1,82 @@
+.to-do-list {
+    font-family: 'Open Sans Condensed', arial, sans;
+    width: 500px;
+    /* padding: 30px; */
+    background: #FFFFFF;
+    margin: 50px auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+}
+
+.to-do-list__h3 {
+    background: #4D4D4D;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 20px;
+}
+
+.to-do-list__form {
+    padding: 0px 20px 20px 20px;
+}
+
+.to-do-list__form-group {
+    margin:5px;
+    padding:8px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.to-do-list__label {
+    color: #6b6163;
+    margin: 5px;
+}
+
+.to-do-list__date-input, .to-do-list__activity-dropdown, .to-do-list__activity-input, .to-do-list__activity-description {
+    margin: 0px auto 10px 10px;
+    padding:7px;
+    border-radius:4px;
+    color: grey;
+}
+
+.to-do-list__activity-dropdown {
+    background-color: white;
+    color: grey;
+    padding: 16px;
+    font-size: 16px;
+    border: 1px solid grey;
+}
+
+.to-do-list__activity-description {
+    margin: 7px 0px;
+}
+
+.to-do-list__completed-radio, .to-do-list__not-completed-radio  {
+    margin: 20px 15px 15px 15px;    
+}
+
+.to-do-list__form-buttons {
+    display:flex;
+}
+
+.to-do-list__form-button {
+    border-radius: 4px;
+    border: none;
+    background-color: black;
+    color:white;
+    text-align: center;
+    font-size: 13px;
+    padding: 10px;
+    width: 100px;
+    transition: all 0.5s;
+    margin:5px;
+}
+
+.to-do-list__form-button:hover {
+    background-color: #979797;
+    border-radius: 4px;
+    border: none;
+}

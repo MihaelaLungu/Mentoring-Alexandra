@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="to-do-list">
+    <h3 class="to-do-list__h3">ADD AN ACTIVITY TO THE LIST</h3>
+    <form class="to-do-list__form" [formGroup]="toDoForm">
+      <div class="to-do-list__form-group">
+        <label class="to-do-list__label" for="activity">Activity name:</label>
+        <input class="to-do-list__activity-input" #name type="text" formControlName="name" name="activity-name" placeholder="Enter activity">
+      </div>
+      <div class="to-do-list__form-group">
+        <label class="to-do-list__label" for="type">What type of activity is this?</label>
+        <select class="to-do-list__activity-dropdown" #type formControlName="type">
+          <option value="leisure">Leisure</option>
+          <option value="work">Work</option>
+          <option value="cooking">Household</option>
+        </select>
+      </div>
+      <div class="to-do-list__form-group">
+        <label class="to-do-list__label to-do-list__completed-label" for="completed-question">Have you already
+          completed this activity?</label><br>
+        <label class="to-do-list__label" for="completed">Yes</label>
+        <input class="to-do-list__completed-radio" #completed type="radio" formControlName="completed" name="completed" value="Completed">
+        <label class="to-do-list__label" for="not-completed">No</label>
+        <input class="to-do-list__not-completed-radio" #completed type="radio" formControlName="completed" name="completed" value="Not Completed">
+      </div>
+      <div class="to-do-list__form-group">
+        <label class="to-do-list__label" for="activity-description">Could you briefly describe this activity?</label>
+        <textarea class="to-do-list__activity-description" #description formControlName="description" name="activity-description" placeholder="Enter activity description"
+          rows="6" cols="50"></textarea>
+      </div>
+      <div class="to-do-list__form-buttons">
+        <button class="to-do-list__form-button create-button" type="submit" name="submit" (click)="add(name.value, type.value, completed.value, description.value); name.value=''; type.value=''; completed.value=''; description.value=''">Add
+          Activity</button>
+        <button class="to-do-list__form-button update-button" type="button" name="update-button" onclick="updateOnClick()">Update
+          Activity</button>
+        <button class="to-do-list__form-button delete-button" type="submit" name="delete-button" onclick="deleteOnClick()">Delete
+          Activity</button>
+        <button class="to-do-list__form-button save-button" type="submit" name="save-button" (click)="saveActivity()">Test Save Activity</button>
+      </div>
+
+    </form>
+  </div> <!-- div class = "to-do-list" -->
+</div><!-- div class="container"-->

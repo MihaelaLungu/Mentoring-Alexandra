@@ -1,0 +1,55 @@
+<div class="container">
+  <h2 class="profile-form__h2">Welcome, Alexandra{{profileForm.fname}}!</h2>
+  <!-- <h2 *ngIf="!isEditOrNew" class="profile-form__h2">Welcome !</h2> -->
+  <div class="profile-form">
+    <div class="profile-form__profile-picture-group">
+      <h3 class="profile-form__profile-pic-text">Profile picture:</h3>
+      <img class="profile-form__profile-pic" src="../../assets/images/profile-pic.jpg" alt="Profile Picture">
+      <input class="profile-form__choose-pic" type="file" name="profile-picture" accept="image/*">
+    </div>
+    <!--div class="profile-form__profile-picture-group"-->
+    <div class="profile-form__profile-info-group">
+      <h3 class="profile-form__details">Personal details:</h3>
+      <form class="profile-form__form" [formGroup]="profileForm">
+        <div class="profile-form__form-group">
+          <label class="profile-form__label" for="fname">First Name*:
+            <!-- <input class="profile-form__fname-input" type="text" name="fname" placeholder="First Name" [(ngModel)]="fname"> -->
+            <!-- <input class="profile-form__fname-input" type="text" name="fname" placeholder="First Name" [formControl]="fname"> -->
+            <input class="profile-form__fname-input" type="text" formControlName="fname" placeholder="First Name">
+          </label>
+        </div>
+        <div class="profile-form__form-group">
+          <label class="profile-form__label" for="lname">Last Name*:</label>
+          <input class="profile-form__lname-input" type="text" formControlName="lname" name="lname" placeholder="Last Name">
+        </div>
+        <div class="profile-form__form-group">
+          <label class="profile-form__label" for="bday">Date of birth:</label>
+          <input class="profile-form__bday-input" type="date" formControlName="bday" name="bday">
+        </div>
+        <div class="profile-form__form-group">
+          <label class="profile-form__label profile-form__gender" for="gender">Gender:</label><br>
+          <label class="profile-form__label" for="male">Male</label>
+          <input class="profile-form__male-radio" type="radio" formControlName="gender" name="gender" value="Male">
+          <label class="profile-form__label" for="female">Female</label>
+          <input class="profile-form__female-radio" type="radio" formControlName="gender" name="gender" value="Female">
+        </div>
+        <div class="profile-form__form-group">
+          <label class="profile-form__label" for="email">E-mail*:</label>
+          <input class="profile-form__email-input" type="email" formControlName="email" name="email" placeholder="E-mail address">
+        </div>
+        <div class="profile-form__form-group">
+          <label class="profile-form__label" for="password">Password*:</label>
+          <input class="profile-form__password-input" type="password" formControlName="password" name="password" placeholder="Password">
+        </div>
+        <div class="profile-form__form-buttons">
+          <!-- <button class="profile-form__form-button update-button" type="submit" name="update-button" (click)="updateName()" [disabled]="!profileForm.valid">Update Profile</button> -->
+          <button class="profile-form__form-button save-button" type="button" name="save-button" (click)="saveProfile()">Save</button>
+        </div>
+
+      </form>
+    </div>
+    <!--div class="profile-form__profile-info-group"-->
+  </div> <!-- div class = "profile-form" -->
+
+</div>
+<!--div class="container"-->

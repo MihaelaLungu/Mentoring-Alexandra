@@ -1,0 +1,56 @@
+.table {
+    font-family: 'Open Sans Condensed', arial, sans;
+    /* width: 500px; */
+    padding: 30px;
+    background: #FFFFFF;
+    margin: 50px auto;
+}
+
+.table__table-caption {
+    font-weight: bold;
+    font-style: italic;
+    padding: 10px;
+    color: black;
+}
+
+table th {
+    background: #4D4D4D;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 20px;
+}
+
+table, td, th {
+    border: 1px solid black;
+    border-collapse:collapse; 
+    color: #6b6163;
+}
+
+td,th {
+    padding: 10px;
+}
+
+.table__short-columns {
+    width: 50px;
+}
+
+.table__long-columns {
+    width: 200px;
+}
+
+table tr:nth-child(even) {
+    background-color: #e9e9e9;
+}
+
+table tr:hover {
+    background-color:rgb(194, 191, 191);
+    transition: all 0.5s;
+}
+
+.table__table-checkbox {
+    margin:10px;
+    width:30px;
+}
